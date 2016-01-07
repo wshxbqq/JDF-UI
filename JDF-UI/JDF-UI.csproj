@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC85407D-F4DE-4E69-9BDD-561A7C457FC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JDF_UI</RootNamespace>
+    <AssemblyName>JDF-UI</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bitbug_favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebKitBrowser">
+      <HintPath>shardLibs\WebKit.NET-0.5-bin-cairo\bin\WebKitBrowser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleHTTPServer.cs" />
+    <Compile Include="UC\UC_Console.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Console.Designer.cs">
+      <DependentUpon>UC_Console.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Editor.Designer.cs">
+      <DependentUpon>UC_Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_FolderTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_FolderTree.Designer.cs">
+      <DependentUpon>UC_FolderTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_JDF_UserInterface.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_JDF_UserInterface.Designer.cs">
+      <DependentUpon>UC_JDF_UserInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_ProjectIco.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_ProjectIco.Designer.cs">
+      <DependentUpon>UC_ProjectIco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_TitleLogo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_TitleLogo.Designer.cs">
+      <DependentUpon>UC_TitleLogo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Console.resx">
+      <DependentUpon>UC_Console.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Editor.resx">
+      <DependentUpon>UC_Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_FolderTree.resx">
+      <DependentUpon>UC_FolderTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_JDF_UserInterface.resx">
+      <DependentUpon>UC_JDF_UserInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_ProjectIco.resx">
+      <DependentUpon>UC_ProjectIco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_TitleLogo.resx">
+      <DependentUpon>UC_TitleLogo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\title_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\title_logo_v1.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\blue16_018.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\blue16_026.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\blue16_031.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\selected.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\btn_bianyi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\btn_chongqi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\btn_chushu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\btn_fabu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\btn_guanbi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\btn_qingchuhuancun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bitbug_favicon.ico" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="html\editor.html" />
+    <Content Include="html\list_tpl.html" />
+    <EmbeddedResource Include="img\jdf_project_bg.png" />
+    <Content Include="img\bitbug_favicon.ico" />
+    <Content Include="jdfui_ico.ico" />
+    <None Include="Resources\flash.png" />
+    <None Include="Resources\reflash1.png" />
+    <None Include="Resources\btn_release_1.png" />
+    <None Include="Resources\btn_release.png" />
+    <None Include="Resources\btn_output_1.png" />
+    <None Include="Resources\btn_output.png" />
+    <None Include="Resources\btn_compile_1.png" />
+    <None Include="Resources\btn_compile.png" />
+    <None Include="Resources\btn_clear_1.png" />
+    <None Include="Resources\btn_clear.png" />
+    <None Include="Resources\bnt_close_1.png" />
+    <None Include="Resources\bnt_close.png" />
+    <None Include="Resources\bootstrap.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ImageButton\ImageButton.csproj">
+      <Project>{839EE91F-8E1F-4D47-82B6-EFC6A95C2F78}</Project>
+      <Name>ImageButton</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
